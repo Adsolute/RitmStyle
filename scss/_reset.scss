@@ -5,8 +5,8 @@
 }
 
 *,
-*:before,
-*:after {
+:before,
+:after {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
@@ -14,12 +14,32 @@
 :focus,
 :active {
 	outline: none;
+	text-decoration: none;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+	color: inherit;
 }
 
 a:focus,
-a:active {
+a:active,
+a:hover,
+a:visited {
 	outline: none;
+	text-decoration: none;
+	color: inherit;
 }
+
+// a,
+// a:visited
+// // a:focus,
+// // a:active,
+// // a:hover
+// {
+// 	color: yellow;
+// }
 
 nav,
 footer,
@@ -65,15 +85,6 @@ button {
 button::-moz-focus-inner {
 	padding: 0;
 	border: 0;
-}
-
-a,
-a:visited {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: none;
 }
 
 ul li {

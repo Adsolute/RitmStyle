@@ -1,6 +1,6 @@
 $bgc: #162831;
 $tc: #ffff;
-$cwidht: 1400px;
+$cwidht: 1430px;
 
 body {
 	// font-family: Rubik;
@@ -11,7 +11,7 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	min-width: 1vw;
+	// min-width: 1vw;
 	min-height: 100%;
 	overflow: hidden;
 }
@@ -19,5 +19,20 @@ body {
 [class*="__container"] {
 	width: $cwidht;
 	margin: 0 auto;
-	width: 100%;
+	max-width: 100%;
 }
+.main {
+	flex: 1 1 auto;
+}
+// .-ibg{
+// 	position: relative;
+// }
+// .-ibg img {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	top: 0;
+// 	left: 0;
+// 	object-fit: cover;
+// 	content: "";
+// }
