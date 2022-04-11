@@ -296,10 +296,8 @@
 	&__item-reverse {
 		flex-direction: row-reverse;
 	}
-	// &__item-reverse img {
-	// 	padding-right: 12px;
-	// }
-	&__item:not(:last-child){
+
+	&__item:not(:last-child) {
 		margin-bottom: 100px;
 	}
 }
@@ -310,7 +308,7 @@
 		justify-content: center;
 		align-items: flex-start;
 		max-width: 466px;
-		flex: 0 1 50%;	
+		flex: 0 1 50%;
 	}
 	&__img {
 		border-radius: 10px;
@@ -324,14 +322,14 @@
 }
 .text {
 	&__title {
-		font-family: 'Proxima Nova';
+		font-family: "Proxima Nova";
 		font-weight: 700;
 		font-size: 24px;
 		line-height: 140%;
 		margin-bottom: 30px;
 	}
 	&__text {
-		font-family: 'Proxima Nova';
+		font-family: "Proxima Nova";
 		font-weight: 300;
 		font-size: 12px;
 		line-height: 140%;
@@ -341,7 +339,6 @@
 // ------------------------------------------------------------------------------------------------ //
 
 .main-cost {
-
 	&__container {
 		width: 1106px;
 	}
@@ -356,7 +353,6 @@
 	}
 }
 .cost {
-
 	&__title-text {
 	}
 
@@ -382,30 +378,27 @@
 		flex-direction: column;
 		flex: 1 1 50%;
 		padding: 0 0 0 38px;
-		
-		
 	}
 
 	&__names-item {
-		font-family: 'Proxima Nova';
+		font-family: "Proxima Nova";
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 140%;
 		position: relative;
 	}
-	&__names-item::before{
+	&__names-item::before {
 		content: "";
 		position: absolute;
 		width: 18px;
 		height: 9px;
 		top: 50%;
-		background: #018ABE;
+		background: #018abe;
 		border-radius: 0px 50px;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
 		left: -30px;
-
 	}
-	&__names-item:not(:last-child){
+	&__names-item:not(:last-child) {
 		margin-bottom: 30px;
 	}
 
@@ -413,16 +406,15 @@
 		display: flex;
 		flex-direction: column;
 	}
-	
 
 	&__costs-item {
-		font-family: 'El Messiri';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 140%;
+		font-family: "El Messiri";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 140%;
 	}
-	&__costs-item:not(:last-child){
+	&__costs-item:not(:last-child) {
 		margin-bottom: 30px;
 	}
 }
@@ -434,13 +426,13 @@ line-height: 140%;
 	}
 
 	&__text {
-		font-family: 'El Messiri';
+		font-family: "El Messiri";
 
-font-weight: 700;
-font-size: 21px;
-line-height: 140%;
+		font-weight: 700;
+		font-size: 21px;
+		line-height: 140%;
 
-text-align: center;
+		text-align: center;
 		text-align: center;
 		margin-top: 30px;
 	}
@@ -448,20 +440,28 @@ text-align: center;
 
 // ----------------------------------------------------------------------------------------------------- //
 
-
 .main-maps {
-
 	&__container {
 	}
 
 	&__body {
-		display:grid;
-		
+		padding: 0px 15px;
+		display: grid;
+		gap: 48px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 	}
 }
 .maps {
-
 	&__map {
+		grid-column: 1/3;
+		grid-row: 1/3;
+		// border-radius: 20px;
+	}
+	&__google {
+		// width: 100%;
+		height: 100%;
+		border-radius: 40px;
 	}
 
 	&__info-box {
@@ -470,53 +470,122 @@ text-align: center;
 	}
 }
 .info-box {
-
 	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		padding: 35px 45px;
+		background-color: #018abe;
+		border-radius: 10px;
 	}
 
 	&__title {
+		font-family: "El Messiri";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 140%;
+		margin: 0px 0px 20px 0px;
 	}
 
 	&__adress {
 		display: flex;
 		flex-direction: column;
+		font-family: "Proxima Nova";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 135%;
 	}
 
 	&__button {
-		display: inline-block;
+		color: #018abe;
+	}
+}
+.info-box {
+	&__adress {
+		display: flex;
+		// justify-content: flex-start;
+		// align-items: flex-start;
+		width: 100%;
+		// align-items: flex-start;
+		justify-content: center;
+		justify-items: start;
 	}
 }
 .adress {
-
-	&__street {
+	&__item {
 		display: flex;
+		text-align: left;
+		justify-content: flex-start;
+	}
+	&__item:not(:last-child) {
+		margin: 0px 0px 21px 0px;
+	}
+	&__image {
+		flex: 0 1 40px;
 	}
 
-	&__street-icon {
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 135%;
 	}
+}
 
-	&__street-text {
+.info-box {
+	&__button {
+		margin: 30px 0px 0px 0px;
 	}
-
-	&__subway {
-		display: flex;
-	}
-
-	&__subway-icon {
-	}
-
-	&__subway-text {
-	}
-
-	&__worktime {
-		display: flex;
-	}
-
-	&__worktime-icon {
-	}
-
-	&__worktime-text {
+}
+.button {
+	&__link {
+		display: block;
+		background-color: #fff;
 	}
 }
 
 // ----------------------------------------------------------------------------------------------------- //
+.footer {
+	&__container {
+	}
+
+	&__body {
+		padding: 0px 15px;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+		// max-width: 200px;
+		min-height: 100px;
+	}
+
+	&__date {
+		margin: 0px 20px 0px 0px;
+
+		font-family: "Proxima Nova";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 135%;
+	}
+
+	&__name {
+		font-family: "Proxima Nova";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 135%;
+		flex: 1 1 auto;
+	}
+
+	&__made-by {
+		// font-family: "Proxima Nova";
+		display: block;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 135%;
+		// flex: 0 1 auto;
+		// align-self: end;
+	}
+}
