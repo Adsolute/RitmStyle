@@ -147,6 +147,12 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.header__button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
 .menu {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -161,14 +167,40 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0px 10px;
 }
 .menu__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   font-weight: 400;
   font-size: 16px;
   line-height: 135%;
+  padding: 7px;
+  margin: 3px;
+  border: solid 1px transparent;
+}
+@media (max-width: 767.9999px) {
+  .menu__item {
+    padding: 4px;
+  }
 }
 .menu__item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 40px;
+}
+@media (max-width: 1023.999px) {
+  .menu__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 767.9999px) {
+  .menu__item:not(:last-child) {
+    margin-right: 0px;
+  }
+}
+.menu__item:hover {
+  border-color: #018abe;
+  border-radius: 5px;
 }
 .menu__link {
   color: #ffffff;
@@ -182,6 +214,7 @@ body {
   font-size: 13px;
   line-height: 140%;
   font-family: "Proxima Nova";
+  display: inline-block;
 }
 
 .main-aquaterapy__body {
@@ -390,6 +423,9 @@ body {
           flex: 1 1 25%;
   opacity: 0.5;
 }
+.reviewes__content-body:not(:last-child) {
+  margin-right: 30px;
+}
 .reviewes__content-box {
   margin: 50px 45px;
   display: -webkit-box;
@@ -399,6 +435,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  scale: 1.5;
 }
 .reviewes__content-title {
   font-family: "Proxima Nova";
@@ -419,8 +456,17 @@ body {
   display: flex;
 }
 
+.content4 {
+  display: none;
+}
+
 .content-body__active {
   opacity: 1;
+}
+.content-body__inactive {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .navigation-box__item {
